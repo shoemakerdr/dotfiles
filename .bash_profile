@@ -27,19 +27,19 @@ mkcd ()
 source ~/.git-completion.sh
 
 # colors!
-LIGHT_GREEN="\e[92m"
+LIGHT_GREEN="\[\e[92m\]"
 GREEN=$(tput setaf 2)
 POWDER_BLUE=$(tput setaf 153)
 RESET="\[\033[0m\]"
-WHITE="\e[39m"
-PINK="\e[38;5;219m"
-YELLOW="\e[38;5;226m"
-BLACK="\e[38;5;234m"
-BLUE="\e[38;5;33m"
-BLUE_BACKGROUND="\e[48;5;33m"
-PINK_BACKGROUND="\e[48;5;219m"
-LIGHT_GREEN_BACKGROUND="\e[48;5;92m"
-POWDER_BLUE_BACKGROUND="\e[48;5;153m"
+WHITE="\[\e[39m\]"
+PINK="\[\e[38;5;219m\]"
+YELLOW="\[\e[38;5;226m\]"
+BLACK="\[\e[38;5;234m\]"
+BLUE="\[\e[38;5;33m\]"
+BLUE_BACKGROUND="\[\e[48;5;33m\]"
+PINK_BACKGROUND="\[\e[48;5;219m\]"
+LIGHT_GREEN_BACKGROUND="\[\e[48;5;92m\]"
+POWDER_BLUE_BACKGROUND="\[\e[48;5;153m\]"
 # Change command prompt
 source ~/.git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
@@ -50,7 +50,7 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 # export PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 
 update_PS1 () {
-  PS1="$PINK\u $LIGHT_GREEN\w$POWDER_BLUE$(__git_ps1) $WHITE\n$BLUE_BACKGROUND->$RESET "
+  PS1="$PINK\u $LIGHT_GREEN\w$POWDER_BLUE$(__git_ps1)$WHITE\n$BLUE_BACKGROUND->$RESET "
 }
 shopt -u promptvars
 PROMPT_COMMAND=update_PS1
