@@ -23,11 +23,10 @@ mkcd ()
         cd -P -- "$1"
 }
 
-export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 # Enable tab completion
 source ~/.git-completion.sh
-# colors!
 
+# colors!
 LIGHT_GREEN="\e[92m"
 GREEN=$(tput setaf 2)
 POWDER_BLUE=$(tput setaf 153)
